@@ -1,0 +1,16 @@
+#tabla equipamiento
+create table equipamiento(
+id int(11) auto_increment primary key,
+nombre_apellido varchar(100) not null,
+patrimonio varchar(200) not null,
+ip varchar(30) not null,
+gateaway varchar(30),
+submask varchar(30),
+dns varchar(100) not null,
+nro_oficina varchar(10) not null,
+login_usuario varchar(50) not null,
+sistema_operativo varchar(100) not null,
+periscopio varchar(50) not null,
+puesto_ubicacion varchar(50) not null,
+mac_address varchar(30) not null
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

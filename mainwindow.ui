@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>:/new/icons/oxygen/32x32/devices/computer-laptop.png</normalon>
+   </iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="icon">
+          <iconset>
+           <normalon>:/new/icons/oxygen/32x32/devices/computer.png</normalon>
+          </iconset>
+         </attribute>
+         <attribute name="title">
+          <string>Equipamiento</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="nombre_apellido">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="3">
+           <widget class="QLineEdit" name="submask">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLabel" name="label_10">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="text">
+             <string>Submask</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="3">
+           <widget class="QLineEdit" name="periscopio">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QLabel" name="label_6">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>Sistema Operativo</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="5">
+           <widget class="QLabel" name="mensaje">
+            <property name="styleSheet">
+             <string notr="true">font: 10pt &quot;Ubuntu&quot;;
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5" rowspan="12">
+           <widget class="QTableWidget" name="table_equipamiento">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <column>
+             <property name="text">
+              <string>Nombre Apellido</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Patrimonio</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>IP</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Gateaway</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Submask</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>DNS</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Nro. oficina</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Usuario</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Sistema Operativo</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Periscopio</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Puesto / Ubicación</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Mac Address</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="12" column="4">
+           <widget class="QPushButton" name="btn_eliminar">
+            <property name="text">
+             <string>Eliminar</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/new/icons/oxygen/32x32/actions/trash-empty.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QLabel" name="label_7">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>Periscopio</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>Nro. Oficina</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLabel" name="label_9">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="text">
+             <string>Gateaway</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLabel" name="label_11">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="text">
+             <string>DNS</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="3">
+           <widget class="QLineEdit" name="mac_address">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="patrimonio">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QLineEdit" name="nro_oficina">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="3">
+           <widget class="QLineEdit" name="usuario">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="3">
+           <widget class="QPushButton" name="btn_editar">
+            <property name="text">
+             <string>Editar</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/new/icons/oxygen/32x32/actions/document-edit.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QLineEdit" name="dns">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <layout class="QFormLayout" name="formLayout"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>IP</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QLineEdit" name="gateaway">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLabel" name="label_5">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>Login Usuario</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1">
+           <widget class="QLabel" name="label_8">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>Mac Address</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="ip">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>Nombre Apellido</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>Patrimonio</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="1">
+           <widget class="QPushButton" name="btn_guardar">
+            <property name="text">
+             <string>Guardar</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/new/icons/oxygen/32x32/devices/media-floppy.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1">
+           <widget class="QLabel" name="label_12">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(61, 56, 70);
+color: rgb(255, 255, 255);
+border: 1px solid grey;
+border-radius: 6px;
+padding: 5px;</string>
+            </property>
+            <property name="text">
+             <string>Puesto / Ubicación</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="3">
+           <widget class="QLineEdit" name="puesto_ubicacion">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="3" colspan="2">
+           <widget class="QComboBox" name="sistema_operativo">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <item>
+             <property name="text">
+              <string>Microsoft Windows 98</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Microsoft Windows XP</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Microsoft Windows Vista</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Microsoft Windows 7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Micorsoft Windows 8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Microsoft Windows 10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Microsoft Windows 11</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ubuntu Linux</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>LinuxMint Linux</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Slackware Linux</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Debian Linux</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Arch Linux</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Red Hat Linux</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Fedora Linux</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+         <zorder>table_equipamiento</zorder>
+         <zorder>label</zorder>
+         <zorder>label_2</zorder>
+         <zorder>patrimonio</zorder>
+         <zorder>label_3</zorder>
+         <zorder>ip</zorder>
+         <zorder>label_4</zorder>
+         <zorder>nro_oficina</zorder>
+         <zorder>label_5</zorder>
+         <zorder>usuario</zorder>
+         <zorder>label_6</zorder>
+         <zorder>label_7</zorder>
+         <zorder>periscopio</zorder>
+         <zorder>label_8</zorder>
+         <zorder>mac_address</zorder>
+         <zorder>btn_guardar</zorder>
+         <zorder>btn_editar</zorder>
+         <zorder>btn_eliminar</zorder>
+         <zorder>mensaje</zorder>
+         <zorder>nombre_apellido</zorder>
+         <zorder>label_9</zorder>
+         <zorder>gateaway</zorder>
+         <zorder>label_10</zorder>
+         <zorder>submask</zorder>
+         <zorder>label_11</zorder>
+         <zorder>dns</zorder>
+         <zorder>sistema_operativo</zorder>
+         <zorder>label_12</zorder>
+         <zorder>puesto_ubicacion</zorder>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="icon">
+          <iconset>
+           <normalon>:/new/icons/oxygen/32x32/emblems/image-stack-open.png</normalon>
+          </iconset>
+         </attribute>
+         <attribute name="title">
+          <string>Ubicaciones</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="icon">
+          <iconset>
+           <normalon>:/new/icons/oxygen/32x32/actions/table.png</normalon>
+          </iconset>
+         </attribute>
+         <attribute name="title">
+          <string>Tablas Base</string>
+         </attribute>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1366</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>nombre_apellido</tabstop>
+  <tabstop>patrimonio</tabstop>
+  <tabstop>ip</tabstop>
+  <tabstop>gateaway</tabstop>
+  <tabstop>submask</tabstop>
+  <tabstop>dns</tabstop>
+  <tabstop>nro_oficina</tabstop>
+  <tabstop>usuario</tabstop>
+  <tabstop>sistema_operativo</tabstop>
+  <tabstop>periscopio</tabstop>
+  <tabstop>puesto_ubicacion</tabstop>
+  <tabstop>mac_address</tabstop>
+  <tabstop>btn_guardar</tabstop>
+  <tabstop>btn_editar</tabstop>
+  <tabstop>btn_eliminar</tabstop>
+  <tabstop>table_equipamiento</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
