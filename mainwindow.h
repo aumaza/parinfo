@@ -16,8 +16,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
+private slots:
+    void on_btn_guardar_clicked();
+
 private:
     Ui::MainWindow *ui;
-    QSqlDatabase *db;
+    //QSqlDatabase *db;
+
 };
 #endif // MAINWINDOW_H
