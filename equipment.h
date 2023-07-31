@@ -58,7 +58,8 @@ public:
     // METODOS
     int connection(QSqlDatabase db);
     int saveEquipment(int conn, QString nombre, QString pat, QString ip, QString gate, QString submask, QString dns, QString nro_oficina, QString usuario, QString os, QString periscopio, QString puesto, QString mac);
-
+    int updateEquipment(int conn, QString id, QString nombre, QString pat, QString ip, QString gate, QString submask, QString dns, QString nro_oficina, QString usuario, QString os, QString periscopio, QString puesto, QString mac);
+    int deleteEquipment(int conn, QString id);
 
 };
 

@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <QtSql/QSqlDatabase>
+#include <QTableWidgetItem>
+#include <QCloseEvent>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,10 +18,22 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void cleanFormEquipment();
+    QTableWidgetItem* myItem(QString value);
+
+    // EQUIPAMIENTO
+    void listarEquipamiento();
+    void fillFormEquipamiento(QString index);
 
 
 private slots:
     void on_btn_guardar_clicked();
+
+    void on_table_equipamiento_activated(const QModelIndex &index);
+
+    void on_btn_editar_clicked();
+
+    void on_btn_eliminar_clicked();
 
 private:
     Ui::MainWindow *ui;

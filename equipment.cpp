@@ -183,6 +183,24 @@ int Equipment::saveEquipment(int conn,QString nombre, QString pat, QString ip, Q
     // VARIBLE DE VALIDACION
     int aux = -1;
 
+    // QUERY DE VALIDACION DE EXISTECIA DE REGISTRO
+    QString sql_1;
+    sql_1.append("select count(id) as cantidad from equipamiento where ip = '"+ip+"'");
+
+    // SE CREA EL QUERY
+    QSqlQuery query_1;
+    query_1.prepare(sql_1);
+
+    // VARIABLE DE CONTROL
+    int cant = -1;
+    if(query_1.exec()){
+        while(query_1.next()){
+            cant = query_1.value(0).toInt();
+        }
+    }else{
+        qDebug() << "Nose pudo realizar la consulta de validación!!" << query_1.lastError();
+    }
+
     // SE CREA EL SQL
     QString sql;
     sql.append("INSERT INTO equipamiento ("
@@ -220,12 +238,18 @@ int Equipment::saveEquipment(int conn,QString nombre, QString pat, QString ip, Q
 
     if(conn == 1){
 
-        if(query.exec()){
-            aux = 1;
-            qDebug() << "MYSQL_QUERY: " << query.lastQuery();
-        }else{
-            aux = 0;
-            qDebug() << "MYSQL_ERROR: " << query.lastError();
+        if(cant == 0){
+
+            if(query.exec()){
+                aux = 1;
+                qDebug() << "MYSQL_QUERY: " << query.lastQuery();
+            }else{
+                aux = 0;
+                qDebug() << "MYSQL_ERROR: " << query.lastError();
+            }
+        }
+        if(cant == 1){
+            aux = 3;
         }
      }else{
         aux = 2;
@@ -233,6 +257,81 @@ int Equipment::saveEquipment(int conn,QString nombre, QString pat, QString ip, Q
 
     return aux;
 
+}
+
+
+int Equipment::updateEquipment(int conn, QString id, QString nombre, QString pat, QString ip, QString gate, QString submask, QString dns, QString nro_oficina, QString usuario, QString os, QString periscopio, QString puesto, QString mac){
+
+        // VRIABLE DE VALIDACION
+        int aux = -1;
+
+        // SE CREA EL SQL
+        QString sql;
+        sql.append("update equipamiento set "
+                   "nombre_apellido = '"+this->setNombreApellido(nombre)+"',"
+                   "patrimonio = '"+this->setpatrimonio(pat)+"',"
+                   "ip = '"+this->setIp(ip)+"',"
+                   "gateaway = '"+this->setGateaway(gate)+"',"
+                   "submask = '"+this->setSubmask(submask)+"',"
+                   "dns = '"+this->setDns(dns)+"',"
+                   "nro_oficina = '"+this->setNroOficina(nro_oficina)+"',"
+                   "login_usuario = '"+this->setLoginUsuario(usuario)+"',"
+                   "sistema_operativo = '"+this->setSistemaOperativo(os)+"',"
+                   "periscopio = '"+this->setPeriscopio(periscopio)+"',"
+                   "puesto_ubicacion = '"+this->setPuesto(puesto)+"',"
+                   "mac_address = '"+this->setMacAddress(mac)+"' "
+                   "where id = '"+id+"'");
+
+        // SE CREA EL QUERY
+        QSqlQuery query;
+        query.prepare(sql);
+
+        if(conn == 1){
+
+            if(query.exec()){
+                aux = 1;
+                qDebug() << "MYSQL_QUERY: " << query.lastQuery();
+            }else{
+                aux = 0;
+                qDebug() << "MYSQL_ERROR: " << query.lastError();
+            }
+        }
+        if(conn == 0){
+            aux = 2;
+        }
+
+        return aux;
+
+}
+
+int Equipment::deleteEquipment(int conn, QString id){
+
+    // VARIABLE DE VALIDACION
+    int aux = -1;
+
+    // SE CREA EL SQL
+    QString sql;
+    sql.append("delete from equipamiento where id = '"+id+"'");
+
+    // SE CREA EL QUERY
+    QSqlQuery query;
+    query.prepare(sql);
+
+    if(conn == 1){
+
+        if(query.exec()){
+            aux = 1;
+            qDebug() << "Atención!! Se ha eliminado satisfactoriamente el registro de Equipo!";
+        }else{
+            aux = 0;
+            qDebug() << "Atención!! Se ha producido un error al intentar eliminar el registro de Equipo! " << query.lastError();
+        }
+    }
+    if(conn == 0){
+        aux = 2;
+    }
+
+    return aux;
 }
 
 
